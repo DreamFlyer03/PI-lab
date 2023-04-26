@@ -7,3 +7,10 @@
 # Макар Надежда Владимировна
 # Липанин Вадим Александрович
 # Саркисов Андрей Юрьевич
+
+import streamlit as st
+import Starkovskaya as v_9
+import sukhanova as v_1
+import urusova as v_5
+import sustretov as v_3
+
