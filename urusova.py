@@ -3,7 +3,7 @@ import streamlit as st
 def urusova_code():
     st.title("Пассажиры Титаника")
     choise = st.radio('Выберите пол пассажира', ['муж', 'жен'])
-    var = st.selectbox('Выберите класс полета', ['1', '2', '3'])
+    var = st.selectbox('Выберите класс пассажира', ['1', '2', '3'])
     if choise == 'муж':
         choise = 'male'
     else:
