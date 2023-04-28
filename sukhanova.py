@@ -8,7 +8,7 @@ import pandas as pd
 
 def sukhanova_code():
     # делаем страничку пошире
-    st.set_page_config(layout="wide", page_title="Homework Суханова Н.А.")
+    #st.set_page_config(layout="wide", page_title="Homework Суханова Н.А.")
 
     # заголовки + задание
     st.header("Суханова Н.А.")
@@ -32,7 +32,7 @@ def sukhanova_code():
     # обработка нажатия кнопки
     if submit:
         # считывание файла через pandas (сказали, что можно)
-        csv = pd.read_csv('input_data/data.csv')
+        csv = pd.read_csv('data.csv')
 
         # обработка варианта вывода (табличка или список имён)
         if result == 'table':
