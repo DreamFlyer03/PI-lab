@@ -2,7 +2,7 @@ import csv
 import streamlit as st
 import requests
 
-    def sarkisov_cod():
+def sarkisov_cod():
     min_price_male = 0
     max_price_male = 0
     midl_price_male = 0
