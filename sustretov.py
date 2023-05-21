@@ -33,14 +33,15 @@ def process_data(file, min_age=30.0, max_age=60.0):
     return pass_data
 
 
-st.header("Сустретов И.С., группа ПИ4-см.")
-st.header("Лабораторная работа №9 - Работа с библиотекой Streamlit, вариант 3")
-st.subheader("Пассажиры \"Титаника\", мужчины от 30 до 60 лет")
-age_range = st.slider('Укажите диапазон возраста пассажиров', 30.0, 60.0, (35.0, 55.0), 0.5)
-age_min = age_range[0]
-age_max = age_range[1]
+def sustretov_code():
+    st.header("Сустретов И.С., группа ПИ4-см.")
+    st.header("Лабораторная работа №9 - Работа с библиотекой Streamlit, вариант 3")
+    st.subheader("Пассажиры \"Титаника\", мужчины от 30 до 60 лет")
+    age_range = st.slider('Укажите диапазон возраста пассажиров', 30.0, 60.0, (35.0, 55.0), 0.5)
+    age_min = age_range[0]
+    age_max = age_range[1]
 
-work_file = get_data_from_file()  # готовим информацию для обработки
-result = process_data(work_file, age_min, age_max)  # отбираем нужное в нашей функции, которую будем тестировать
+    work_file = get_data_from_file()  # готовим информацию для обработки
+    result = process_data(work_file, age_min, age_max)  # отбираем нужное в нашей функции, которую будем тестировать
 
-st.table(result)  # выводим итоговую таблицу
+    st.table(result)  # выводим итоговую таблицу
