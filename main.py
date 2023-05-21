@@ -38,7 +38,7 @@ elif result == 1:
 elif result == 2:
     sna.sukhanova_code()
 elif result == 3:
-    stv.Starkovskaya_code()
+    stv.starkovskaya_code()
 elif result == 4:
     uoa.urusova_code()
 elif result == 5:
