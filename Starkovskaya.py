@@ -11,7 +11,7 @@ def starkovskaya_code():
     st.write("Homework 9, Старковская Т.В., группа 4пи, 17 вариант, по заданию 2")
     st.write("Вывести имя, возраст, класс билета пассажиров, выбрав пол и спасен/нет.")
     with st.sidebar:
-         with st.form(key='form'):
+        with st.form(key='form'):
              sex = st.selectbox('Выберите пол', ('male', 'female'))
              survived = st.selectbox('Выживший или нет?', (0, 1))
              submit = st.form_submit_button(label='Calculate')
