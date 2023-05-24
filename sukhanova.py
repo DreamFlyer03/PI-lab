@@ -6,9 +6,24 @@ import pandas as pd
 
 # 4. Вывести имена пассажиров, стоимость билета (поле Fare) которых была выше указанной.
 
+
+# считывание файла через pandas (сказали, что можно)
+def get_input_data_as_pd():
+    csv = pd.read_csv('data.csv')
+    return csv
+
+
+def filter_pd_data(csv, price):
+    return csv[csv['Fare'] > price]
+
+
+def filter_pd_data_as_list(csv, price):
+    return csv[csv['Fare'] > price]['Name']
+
+
 def sukhanova_code():
     # делаем страничку пошире
-    #st.set_page_config(layout="wide", page_title="Homework Суханова Н.А.")
+    # st.set_page_config(layout="wide", page_title="Homework Суханова Н.А.")
 
     # заголовки + задание
     st.header("Суханова Н.А.")
@@ -28,14 +43,14 @@ def sukhanova_code():
             # кнопка отправки
             submit = st.form_submit_button(label='Получить результат')
 
-
     # обработка нажатия кнопки
     if submit:
-        # считывание файла через pandas (сказали, что можно)
-        csv = pd.read_csv('data.csv')
+        csv = get_input_data_as_pd()
 
         # обработка варианта вывода (табличка или список имён)
         if result == 'table':
-            st.write(csv[csv['Fare'] > float(price)])
+            st.write(filter_pd_data(csv, float(price)))
         else:
-            st.write(csv[csv['Fare'] > float(price)]['Name'])
+            st.write(filter_pd_data_as_list(csv, float(price)))
+
+sukhanova_code ()
