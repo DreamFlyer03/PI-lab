@@ -1,5 +1,6 @@
 import streamlit as st
 
+
 def urusova_code():
     st.title("Пассажиры Титаника")
     choise = st.radio('Выберите пол пассажира', ['муж', 'жен'])
