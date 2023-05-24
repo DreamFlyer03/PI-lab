@@ -1,4 +1,4 @@
-from main import *
+from urusova6 import *
 
 
 def test_pass_list_male():
