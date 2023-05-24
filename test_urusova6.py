@@ -1,4 +1,4 @@
-from urusova6 import *
+from urusova6 import get_pass_list
 
 
 def test_pass_list_male():
