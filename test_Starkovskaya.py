@@ -7,8 +7,8 @@ def test_do_dataframe_if_save_for_survived_male():
             'Sex': ['male', 'female', 'male', 'female', 'female'],
             'Name': ['PassengerOne', 'PassengerTwo', 'PassengerTree', 'PassengerFour', 'PassengerFive'],
             'Age': [22, 0, 18, 18, 14],
-            'Pclass': [1, 2, 3, 1, 2]
-    }
+            'Pclass': [1, 2, 3, 1, 2]}
+
     test_data = pd.DataFrame(grid)
     left = count_depending_sex_and_save(test_data, "male", 1)
     right = pd.DataFrame({'Name': ['PassengerTree'], 'Age': [18], 'Pclass': [3]})
@@ -20,8 +20,8 @@ def test_do_dataframe_if_save_for_survived_female():
             'Sex': ['male', 'female', 'male', 'female', 'female'],
             'Name': ['PassengerOne', 'PassengerTwo', 'PassengerTree', 'PassengerFour', 'PassengerFive'],
             'Age': [22, 0, 18, 18, 14],
-            'Pclass': [1, 2, 3, 1, 2]
-    }
+            'Pclass': [1, 2, 3, 1, 2]}
+
     test_data = pd.DataFrame(grid)
     left = count_depending_sex_and_save(test_data, "female", 1)
     right = pd.DataFrame({'Name': ['PassengerFive'], 'Age': [14], 'Pclass': [2]})
@@ -33,8 +33,8 @@ def test_do_dataframe_if_save_if_empty_fields():
             'Sex': ['male', 'female', 'male', None, 'female'],
             'Name': ['PassengerOne', 'PassengerTwo', 'PassengerTree', 'PassengerFour', None],
             'Age': [22, 0, 10, 18, 14],
-            'Pclass': [1, 2, 3, 1, 2]
-    }
+            'Pclass': [1, 2, 3, 1, 2]}
+
     test_data = pd.DataFrame(grid)
     left = count_depending_sex_and_save(test_data, "female", 1)
     right = pd.DataFrame({'Name': None, 'Age': [14], 'Pclass': [2]})
