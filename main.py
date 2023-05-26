@@ -14,7 +14,7 @@ import Starkovskaya as stv
 import sukhanova as sna
 import Sarkisov as sau
 import MakarNV as mnv
-import urusova as uoa
+import urusova6 as uoa
 import sustretov as sis
 import stub  # файл-заглушка для отсутствующих работ
 
