@@ -22,5 +22,5 @@ def makarnv_code():
     save = st.selectbox("Спасен?", ['0', '1'])
     st.table({"Спасенные пассажиры:": get_pass_list(data, save, sex)})
 
-    
+
 makarnv_code()
