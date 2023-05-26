@@ -54,5 +54,6 @@ def sukhanova_code():
         else:
             st.write(filter_pd_data_as_list(csv, float(price)))
 
-sukhanova_code()
+
+  sukhanova_code()
 
