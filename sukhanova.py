@@ -4,6 +4,7 @@ import pandas as pd
 # Создать веб-приложение, используя возможности библиотеки streamlit,
 # для обработки данных пассажиров “Титаника” (файл data.csv приложен к заданию).
 
+
 # 4. Вывести имена пассажиров, стоимость билета (поле Fare) которых была выше указанной.
 
 
@@ -53,4 +54,5 @@ def sukhanova_code():
         else:
             st.write(filter_pd_data_as_list(csv, float(price)))
 
-sukhanova_code ()
+sukhanova_code()
+
