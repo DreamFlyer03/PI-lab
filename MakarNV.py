@@ -1,25 +1,24 @@
 import streamlit as st
 
-def V2_MakarNV():
-        st.title('Пассажиры Титаника')
-        st.header("""Определим, кто из пассажиров выжил, а кто – нет.""")
-        var = st.selectbox("Спасены?", ['да' , 'нет'])
-        choise = st.radio('Выбрать пол пассажира:', ["женский", "мужской"])
-        if choise == 'мужской':
-                choise = 'male'
-        else:
-                choise = 'female'
 
-        with open("data.csv") as titanic_data:
-                s = 0
-                for line in titanic_data:
-                        lst = line.rstrip().split(',')
-                        pclass = lst[2]
-                        if pclass == 'Pclass':
-                                continue
-                        name = lst[3] + lst[4]
-                        age = lst[6]
-                        sex = lst[5]
-                        save = lst[1]
-                        if save == "1" and sex == choise:
-                                st.text(f'Данные о пассажирах: {pclass}, {name[1:-1]}, {sex}, {age}')
+def get_pass_list(data, save, sex):
+    if sex == 'мужчины':
+        sex = 'male'
+    else:
+        sex = 'female'
+    out_list = []
+    for line in data:
+        if line.split(',')[1] == save and line.split(',')[5] == sex:
+            out_list += [line]
+    return out_list
+
+with open('data.csv') as file:
+    data = file.readlines()
+
+
+def makarnv_code():
+    sex = st.selectbox('Выберите пол пассажира:', ['мужчины', 'женщины'])
+    save = st.selectbox("Спасен?", ['0', '1'])
+    st.table({"Спасенные пассажиры:": get_pass_list(data, save, sex)})
+
+makarnv_code()
