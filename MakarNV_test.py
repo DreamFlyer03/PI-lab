@@ -9,6 +9,3 @@ def test_pass_list_male():
 def test_pass_list_female():
     data = ['0,1,2,3,4,male', '0,1,2,3,4,female', '0,1,2,3,4,male']
     assert get_pass_list(data, 'женщины', '1') == []
-
-
-
