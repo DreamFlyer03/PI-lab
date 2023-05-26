@@ -1,3 +1,4 @@
+import numpy as np
 from sukhanova import get_input_data_as_pd, filter_pd_data, filter_pd_data_as_list
 
 # первый тест.
