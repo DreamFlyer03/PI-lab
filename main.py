@@ -42,6 +42,6 @@ elif result == 3:
 elif result == 4:
     uoa.urusova_code()
 elif result == 5:
-    mnv.V2_MakarNV()
+    mnv.makarnv_code()
 elif result == 7:
     sau.sarkisov_cod()
