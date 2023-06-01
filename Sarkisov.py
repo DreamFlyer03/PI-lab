@@ -38,7 +38,6 @@ def price(csv_file):
 
 
 def sarkisov_cod():
-    print(midl_price_male, midl_price_female)
     st.title ("Титаник")
     st.write("---")
     variables = [" ", "Мужчины", "Женщины"]
