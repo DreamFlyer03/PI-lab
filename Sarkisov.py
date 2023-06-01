@@ -37,12 +37,13 @@ def price(csv_file):
 
 
 def sarkisov_cod():
-    st.title ("Титаник")
+    st.title("Титаник")
     st.write("---")
     variables = [" ", "Мужчины", "Женщины"]
     default_variable = variables[0]
     with open('.pytest_cache/v/data.csv', mode='r') as csv_file:
-        midl_price_male, midl_price_female, min_price_male, max_price_male, min_price_female, max_price_female = price(csv_file)
+        midl_price_male, midl_price_female, min_price_male, max_price_male,
+                         min_price_female, max_price_female = price(csv_file)
     selected_variable = st.selectbox("Выберите пол:", variables, index=variables.index(default_variable))
     if selected_variable == "Мужчины":
         st.write("Минимальная цена билета для пассажиров мужского пола: {:.2f}".format(min_price_male))
@@ -52,6 +53,5 @@ def sarkisov_cod():
         st.write("Минимальная цена билета для пассажиров женского пола: {:.2f}".format(min_price_female))
         st.write("Максимальная цена билета для пассажиров женского пола: {:.2f}".format(max_price_female))
         st.write("Средняя цена билета для пассажиров женского пола: {:.2f}".format(midl_price_female))
-
             
 sarkisov_cod()
