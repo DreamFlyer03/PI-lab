@@ -41,9 +41,8 @@ def sarkisov_cod():
     st.write("---")
     variables = [" ", "Мужчины", "Женщины"]
     default_variable = variables[0]
-    with open('.pytest_cache/v/data.csv', mode='r') as csv_file:
-        midl_price_male, midl_price_female, min_price_male, max_price_male,
-                         min_price_female, max_price_female = price(csv_file)
+    with open('data.csv', mode='r') as csv_file:
+        midl_price_male, midl_price_female, min_price_male, max_price_male, min_price_female, max_price_female = price(csv_file)
     selected_variable = st.selectbox("Выберите пол:", variables, index=variables.index(default_variable))
     if selected_variable == "Мужчины":
         st.write("Минимальная цена билета для пассажиров мужского пола: {:.2f}".format(min_price_male))
