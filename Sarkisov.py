@@ -52,5 +52,6 @@ def sarkisov_cod():
         st.write("Минимальная цена билета для пассажиров женского пола: {:.2f}".format(min_price_female))
         st.write("Максимальная цена билета для пассажиров женского пола: {:.2f}".format(max_price_female))
         st.write("Средняя цена билета для пассажиров женского пола: {:.2f}".format(midl_price_female))
-            
+
+
 sarkisov_cod()
