@@ -12,7 +12,7 @@ def test_midl_price_male():
     result = price(test_data)
     assert result[0] == 7.25
 
-    
+
 # проверка подсчётов по тестовому набору данных
 # проверка значения средней стоимости билета для женщин. В тестовом наборе он равен 50 (100 + 30 ) / 2
 def test_midl_price_female():
