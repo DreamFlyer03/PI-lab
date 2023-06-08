@@ -2,11 +2,11 @@ import streamlit as st
 import csv
 from io import StringIO
 
-
 def read_from_file_to_text(filename):
     file = open(filename, mode='r')
     text = file.read()
     return text
+
 
 def convert_to_csv(text):
     data = csv.DictReader(StringIO(text))
@@ -48,6 +48,7 @@ def price(text_data):
     midl_price_female = all_price_female / cont_female
     return midl_price_male, midl_price_female, min_price_male, max_price_male, min_price_female, max_price_female
 
+
 def sarkisov_cod(filename):
     st.title ("Титаник")
     st.write("---")
@@ -57,13 +58,13 @@ def sarkisov_cod(filename):
     midl_price_male, midl_price_female, min_price_male, max_price_male, min_price_female, max_price_female = price(text_from_file)
     selected_variable = st.selectbox("Выберите пол:", variables, index=variables.index(default_variable))
     if selected_variable == "Мужчины":
-            st.write("Минимальная цена билета для пассажиров мужского пола: {:.2f}".format(min_price_male))
-            st.write("Максимальная цена билета для пассажиров мужского пола: {:.2f}".format(max_price_male))
-            st.write("Средняя цена  билета для пассажиров мужского пола: {:.2f}".format(midl_price_male))
+        st.write("Минимальная цена билета для пассажиров мужского пола: {:.2f}".format(min_price_male))
+        st.write("Максимальная цена билета для пассажиров мужского пола: {:.2f}".format(max_price_male))
+        st.write("Средняя цена  билета для пассажиров мужского пола: {:.2f}".format(midl_price_male))
     elif selected_variable == "Женщины":
-            st.write("Минимальная цена билета для пассажиров женского пола: {:.2f}".format(min_price_female))
-            st.write("Максимальная цена билета для пассажиров женского пола: {:.2f}".format(max_price_female))
-            st.write("Средняя цена билета для пассажиров женского пола: {:.2f}".format(midl_price_female))
+        st.write("Минимальная цена билета для пассажиров женского пола: {:.2f}".format(min_price_female))
+        st.write("Максимальная цена билета для пассажиров женского пола: {:.2f}".format(max_price_female))
+        st.write("Средняя цена билета для пассажиров женского пола: {:.2f}".format(midl_price_female))
 
 
 sarkisov_cod('data.csv')
