@@ -50,12 +50,13 @@ def price(text_data):
 
 
 def sarkisov_cod(filename):
-    st.title ("Титаник")
+    st.title("Титаник")
     st.write("---")
     variables = [" ", "Мужчины", "Женщины"]
     default_variable = variables[0]
     text_from_file = read_from_file_to_text(filename)
-    midl_price_male, midl_price_female, min_price_male, max_price_male, min_price_female, max_price_female = price(text_from_file)
+    midl_price_male, midl_price_female, min_price_male, max_price_male, \
+        min_price_female, max_price_female = price(text_from_file)
     selected_variable = st.selectbox("Выберите пол:", variables, index=variables.index(default_variable))
     if selected_variable == "Мужчины":
         st.write("Минимальная цена билета для пассажиров мужского пола: {:.2f}".format(min_price_male))
