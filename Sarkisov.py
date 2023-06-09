@@ -3,7 +3,7 @@ import csv
 from io import StringIO
 
 
-def read_from_file_to_text(filename):
+def read_from_file_to_text():
     file = open(filename, mode='r')
     text = file.read()
     return text
@@ -55,7 +55,7 @@ def sarkisov_cod(filename):
     st.write("---")
     variables = [" ", "Мужчины", "Женщины"]
     default_variable = variables[0]
-    text_from_file = read_from_file_to_text(filename)
+    text_from_file = read_from_file_to_text('data.csv')
     midl_price_male, midl_price_female, min_price_male, max_price_male, \
         min_price_female, max_price_female = price(text_from_file)
     selected_variable = st.selectbox("Выберите пол:", variables, index=variables.index(default_variable))
@@ -69,4 +69,4 @@ def sarkisov_cod(filename):
         st.write("Средняя цена билета для пассажиров женского пола: {:.2f}".format(midl_price_female))
 
 
-sarkisov_cod('data.csv')
+sarkisov_cod()
