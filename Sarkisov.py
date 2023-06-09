@@ -3,7 +3,7 @@ import csv
 from io import StringIO
 
 
-def read_from_file_to_text():
+def read_from_file_to_text(filename):
     file = open(filename, mode='r')
     text = file.read()
     return text
