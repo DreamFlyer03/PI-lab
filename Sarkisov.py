@@ -50,7 +50,7 @@ def price(text_data):
     return midl_price_male, midl_price_female, min_price_male, max_price_male, min_price_female, max_price_female
 
 
-def sarkisov_cod(filename):
+def sarkisov_cod():
     st.title("Титаник")
     st.write("---")
     variables = [" ", "Мужчины", "Женщины"]
