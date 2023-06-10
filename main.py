@@ -17,7 +17,7 @@ import MakarNV as mnv
 import urusova6 as uoa
 import sustretov as sis
 import lipanin as lva
-import stub  # файл-заглушка для отсутствующих работ
+# import stub  # файл-заглушка для отсутствующих работ - более не нужна, но мало ли
 
 st.title("Группа ПИ-4см, команда №2. Совместная работа")
 st.header("Титаник продолжает мучительно тонуть")
