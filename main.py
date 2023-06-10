@@ -16,6 +16,7 @@ import Sarkisov as sau
 import MakarNV as mnv
 import urusova6 as uoa
 import sustretov as sis
+import lipanin as lva
 import stub  # файл-заглушка для отсутствующих работ
 
 st.title("Группа ПИ-4см, команда №2. Совместная работа")
@@ -32,7 +33,7 @@ result = st.radio('Выберите, чью работу требуется за
                   format_func=lambda s: students.get(s))
 
 if result == 6:
-    stub.stub_page()  # Используем заглушку для не присланных пока в проект работ
+    lva.lipanin_code()
 elif result == 1:
     sis.sustretov_code()
 elif result == 2:
