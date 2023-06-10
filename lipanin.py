@@ -15,6 +15,9 @@ def get_pass_list(data, sex, age_start, age_end):
 
 
 def lipanin_code():
+    st.header("Липанин В.А., группа ПИ4-см.")
+    st.header("Лабораторная работа №9 - Работа с библиотекой Streamlit, вариант 1")
+    st.subheader("Пассажиры \"Титаника\", Вывести имя и возраст спасенных детей, указав пол и возраст (от 0 до 18)")
     data = pd.read_csv('data.csv')
     sex = st.radio('Выберите пол пассажира:', ['мужской', 'женский'])
     age_start, age_end = st.slider('Выберите возраст:', 0, 18, (0, 18))
